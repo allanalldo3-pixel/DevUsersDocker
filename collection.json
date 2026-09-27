@@ -1,0 +1,82 @@
+{
+  "info": {
+    "name": "DevUsers Docker API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Criar Usuário",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Allan\",\n  \"email\": \"allan@email.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3333/users/create",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["users", "create"]
+        }
+      }
+    },
+    {
+      "name": "2. Listar Usuários",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/users/show",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["users", "show"]
+        }
+      }
+    },
+    {
+      "name": "3. Atualizar Usuário",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Allan Atualizado\",\n  \"email\": \"allan.novo@email.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3333/users/update/1296f83a-bf76-4d99-8d74-997dcde8dbb8",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["users", "update", "I1296f83a-bf76-4d99-8d74-997dcde8dbb8"]
+        }
+      }
+    },
+    {
+      "name": "4. Excluir Usuário",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/users/delete/1296f83a-bf76-4d99-8d74-997dcde8dbb8",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["users", "delete", "1296f83a-bf76-4d99-8d74-997dcde8dbb8"]
+        }
+      }
+    }
+  ]
+}
